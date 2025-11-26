@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.StaffViewEditSkills"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="My Skills"/>
+        </HBox>
+    </top>
+
+    <left>
+        <fx:include source="StaffMainMenuContent.fxml"/>
+    </left>
+
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <ScrollPane GridPane.rowIndex="2">
+                    <content>
+                        <ListView fx:id="ListSkills"  onMouseClicked="#selectListItemFromAllSkills" prefWidth="600"/>
+                    </content>
+                </ScrollPane>
+                <ScrollPane GridPane.rowIndex="2">
+                    <content>
+                        <ListView fx:id="UserSkills" prefWidth="600"/>
+                    </content>
+                </ScrollPane>
+                <Label></Label>
+                <Label></Label>
+                <HBox>
+                <Label text="Skill Description:"></Label>
+                <TextField fx:id="Skill" disable="true"></TextField>
+                <Label></Label>
+                <Label text="Skill Category:"></Label>
+                <TextField fx:id="Description" disable="true"></TextField>
+                <Label></Label>
+                </HBox>
+                <HBox>
+                <Label text="Expiry Date:"></Label>
+                <DatePicker fx:id="ExpiryDate"></DatePicker>
+                <Label></Label>
+                <Label text="Skill Strength:"></Label>
+                <ChoiceBox fx:id="SkillStrengthList">
+                    <items>
+                    </items>
+                </ChoiceBox>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <VBox>
+            <HBox>
+                <Button text="Delete" fx:id="deleteSkill" onAction="#deleteListItem"></Button>
+                <Label></Label>
+                <Button text="Save" fx:id="SaveSkill" onAction="#returnSkillsArray"></Button>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

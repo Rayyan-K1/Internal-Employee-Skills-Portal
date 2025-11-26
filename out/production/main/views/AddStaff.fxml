@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AddStaff"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="Add New Staff"/>
+        </HBox>
+    </top>
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <TextField promptText="First Name" fx:id="FirstName"></TextField>
+                <TextField promptText="Surname" fx:id="Surname"></TextField>
+                <TextField promptText="Username" fx:id="Username"></TextField>
+                <PasswordField promptText="Password" fx:id="Password"/>
+                <Label text="Job Role: "></Label>
+                <ScrollPane GridPane.rowIndex="2">
+                    <content>
+                        <ListView fx:id="JobRole" onMouseClicked="#selectItemFromList" prefWidth="200" prefHeight="100"/>
+                    </content>
+                </ScrollPane>
+                <Label></Label>
+                <ComboBox fx:id="UserRoleList" promptText="User Privilege">
+                    <items>
+                    </items>
+                </ComboBox>
+            </VBox>
+        </HBox>
+    </center>
+    <left>
+        <fx:include source="ManagerMainMenu.fxml"/>
+    </left>
+    <bottom>
+        <HBox>
+            <VBox>
+                <Button text="Submit" onAction="#addStaff">
+                </Button>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>
+

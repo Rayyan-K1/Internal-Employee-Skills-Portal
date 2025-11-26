@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.ManagerViewEditStaff"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="View/Edit Staff"/>
+        </HBox>
+    </top>
+    <left>
+        <fx:include source="ManagerMainMenu.fxml"/>
+    </left>
+    <center>
+        <VBox alignment="CENTER">
+            <Label text="Filter By:"></Label>
+            <ComboBox fx:id="JobRoleFilter" onAction="#setJobRoleFilter" promptText="Job Role">
+                <items>
+                </items>
+            </ComboBox>
+            <HBox>
+            <ComboBox promptText="Skill" fx:id="SkillFilter" onAction="#setSkillFilter">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Word"></String>
+                        <String fx:value="Java"></String>
+                        <String fx:value="Junit"></String>
+                        <String fx:value="Git"></String>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <ComboBox fx:id="SkillStrengthFilter" onAction="#setSkillStrengthFilter" promptText="Skill Strength">
+                <items>
+                </items>
+            </ComboBox>
+            </HBox>
+            <HBox>
+                <ScrollPane GridPane.rowIndex="2">
+                    <content>
+                        <ListView fx:id="StaffMember" onMouseClicked="#selectListItem" prefWidth="450"/>
+                    </content>
+                </ScrollPane>
+            </HBox>
+            <HBox>
+                <Label text="First Name:"></Label>
+                <TextField fx:id="firstName" disable="true" promptText="First Name"></TextField>
+                <Label text="Surname:"></Label>
+                <TextField fx:id="surname" disable="true" promptText="Surname"></TextField>
+            </HBox>
+            <HBox>
+                <Label text="Username:"></Label>
+                <TextField fx:id="username" disable="true" promptText="Username"></TextField>
+                <Label text="Password:"></Label>
+                <PasswordField fx:id="password" disable="true" promptText="Password"></PasswordField>
+            </HBox>
+            <HBox>
+                <Label text="System Role:"></Label>
+                <ComboBox fx:id="SystemRole" disable="true" promptText="User Role">
+                    <items>
+                    </items>
+                </ComboBox>
+                <Label text="User Role:"></Label>
+                <ComboBox fx:id="JobRole" disable="true" promptText="Job Role">
+                    <items>
+                    </items>
+                </ComboBox>
+            </HBox>
+            <Label></Label>
+            <Label text="Staff Skills:"></Label>
+            <HBox>
+                <ScrollPane GridPane.rowIndex="2">
+                    <content>
+                        <ListView fx:id="AllocatedSkills" prefWidth="450"/>
+                    </content>
+                </ScrollPane>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT">
+                <Button fx:id="ManagerViewEditStaff_Delete" text="Delete" onAction="#deleteStaff"></Button>
+                <Button fx:id="ManagerViewEditStaff_Edit" text="Edit" onAction="#editSelectedItem"></Button>
+                <Button fx:id="ManagerViewEditStaff_Save" disable="true" text="Save" onAction="#saveButton"></Button>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
