@@ -1,0 +1,23 @@
+.Window{
+    -fx-pref-width:600;
+    -fx-pref-height:400;
+}
+
+BorderPane{
+    -fx-padding: 10 10 10 10;
+}
+
+HBox{
+    -fx-alignment: center;
+    -fx-padding: 10 10 10 10;
+    -fx-spacing: 30;
+}
+GridPane{
+    -fx-padding: 10 10 10 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+.Window{
+    -fx-pref-width:800;
+    -fx-pref-height:600;
+}

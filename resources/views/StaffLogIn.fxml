@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.StaffLogInController"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label text="Staff Log In"></Label>
+        </HBox>
+    </top>
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <Label text="Username" fx:id=""></Label>
+                <TextField fx:id="StaffUsername"/>
+                <Label text="Password"></Label>
+                <PasswordField fx:id="StaffPassword"/>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox>
+            <VBox>
+                <Button text="Submit" onAction="#submitLogin" fx:id="login">
+                </Button>
+                <Button text="Back" onAction="#backButton" fx:id="buttonButton">
+                </Button>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>

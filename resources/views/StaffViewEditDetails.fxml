@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.StaffViewEditDetails"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="My Details"/>
+        </HBox>
+    </top>
+
+    <left>
+        <fx:include source="StaffMainMenuContent.fxml"/>
+    </left>
+
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <Label text="First Name: "></Label>
+                <TextField fx:id="firstName">
+                </TextField>
+                <Label text="Surname: "></Label>
+                <TextField fx:id="surname">
+                </TextField>
+                <Label text="Username: "></Label>
+                <TextField fx:id="username">
+                </TextField>
+                <Label text="Password: "></Label>
+                <TextField fx:id="password">
+                </TextField>
+                <Label></Label>
+                <ChoiceBox fx:id="StaffDetails_JobRole" value="Job Role">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Junior Developer"></String>
+                            <String fx:value="Mid-Level Developer"></String>
+                            <String fx:value="Senior Developer"></String>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox>
+            <VBox>
+                <Button text="Edit" onAction="#editStaffDetails" fx:id="editDetails"></Button>
+            </VBox>
+            <VBox>
+                <Button text="Save" disable="true" onAction="#saveStaffDetails" fx:id="saveDetails"></Button>
+            </VBox>
+        </HBox>
+    </bottom>
+
+</BorderPane>

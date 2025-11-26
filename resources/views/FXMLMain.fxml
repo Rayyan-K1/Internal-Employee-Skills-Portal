@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="FXMLMain"
+        styleClass="Window">
+<center>
+    <VBox alignment="CENTER">
+        <HBox>
+            <Button text="Manager" onAction="#goToManagerLogin"/>
+            <Button text="Staff" onAction="#goToStaffLogin"/>
+        </HBox>
+    </VBox>
+</center>
+<bottom>
+    <Button text="Quit" onAction="#quitApplication"/>
+</bottom>
+</BorderPane>

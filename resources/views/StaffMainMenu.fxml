@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane  xmlns:fx="http://javafx.com/fxml/1"
+             fx:controller="controllers.StaffMainMenu"
+             styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="Staff Main Menu"/>
+        </HBox>
+    </top>
+
+    <left>
+        <fx:include source="StaffMainMenuContent.fxml"/>
+    </left>
+
+</BorderPane>

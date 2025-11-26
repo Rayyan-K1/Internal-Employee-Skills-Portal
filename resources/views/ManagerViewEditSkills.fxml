@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.ManagerViewEditSkills"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="View/Edit Skills"/>
+        </HBox>
+    </top>
+    <center>
+        <HBox alignment="TOP_LEFT">
+            <ScrollPane GridPane.rowIndex="2">
+                <content>
+                    <ListView fx:id="ViewEditSkills" onMouseClicked="#selectItem" prefWidth="400"/>
+                </content>
+            </ScrollPane>
+            <VBox>
+                <VBox alignment="CENTER">
+                    <Label></Label>
+                    <Label></Label>
+                    <TextField promptText="Skill Description" fx:id="SkillDescription" disable="true"></TextField>
+                    <Label></Label>
+                    <Label text="Skill Category"></Label>
+                    <TextField promptText="Skill Category" fx:id="SkillCategory" disable="true"></TextField>
+                    <Label></Label>
+                    <Label text="Expiry Date"></Label>
+                    <DatePicker fx:id="ExpiryDate" disable="true"></DatePicker>
+                    <Label></Label>
+                    <Label text="Skills Strength"></Label>
+                    <ChoiceBox value="Skills Strength" fx:id="SkillStrengthLevel" disable="true">
+                        <items>
+                        </items>
+                    </ChoiceBox>
+                </VBox>
+            </VBox>
+        </HBox>
+    </center>
+    <left>
+        <fx:include source="ManagerMainMenu.fxml"/>
+    </left>
+    <bottom>
+        <VBox>
+            <HBox>
+                <Button text="Delete" onAction="#DeleteSkill"></Button>
+                <Label></Label>
+                <Button onAction="#EditSkill" text="Edit" fx:id="EditSkills"></Button>
+                <Button text="Save" disable="true" onAction="#SubmitEditedSkill" fx:id="SaveEditedSkill"></Button>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      style="-fx-border-color: darkgrey;" fx:id="navBar"
+      fx:controller="controllers.StaffMainMenu">
+
+    <VBox styleClass="MenuBar" accessibleText="Module Menu Links">
+        <Hyperlink text="My Details" onAction="#showStaffDetails" accessibleText="My Details"/>
+        <Hyperlink text="My Skills" onAction="#showStaffSkills" accessibleText="My Skills"/>
+    </VBox>
+    <VBox styleClass="MenuBar">
+        <Hyperlink text="Log Out" onAction="#logout" fx:id="logOutButton"/>
+    </VBox>
+</VBox>

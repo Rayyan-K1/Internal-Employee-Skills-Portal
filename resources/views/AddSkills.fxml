@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.DatePicker.*?>
+
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.AddSkills"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label styleClass="Heading" text="Add Skill"/>
+        </HBox>
+    </top>
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <Label text="Description: "></Label>
+                    <TextField promptText="Description" fx:id="Description"></TextField>
+                <Label></Label>
+                <Label></Label>
+                <HBox>
+                <Label text="Category: "></Label>
+                <ComboBox promptText="Category" fx:id="SkillCategoryList">
+                    <items>
+                    </items>
+                </ComboBox>
+                </HBox>
+                <HBox>
+                <Label text="Skill Strength: "></Label>
+                    <ComboBox promptText="Strength Of Skill" fx:id="SkillStrengthList">
+                        <items>
+                        </items>
+                    </ComboBox>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+    <left>
+        <fx:include source="ManagerMainMenu.fxml"/>
+    </left>
+    <bottom>
+        <HBox>
+            <VBox>
+                <Button text="Add Skill" onAction="#AddSkillToDB" accessibleText="Add New Skill"></Button>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>

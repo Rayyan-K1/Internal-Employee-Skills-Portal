@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.RootLogInController"
+            styleClass="Window">
+    <top>
+        <HBox>
+            <Label text="Manager Log In"></Label>
+        </HBox>
+    </top>
+    <center>
+        <HBox>
+            <VBox alignment="CENTER">
+                <TextField promptText="Username" fx:id="RootUsername"/>
+                <PasswordField promptText="Password" fx:id="RootPassword"/>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox>
+            <VBox>
+                <Button text="Submit" onAction="#enableLogin"></Button>
+                <Button text="Back" onAction="#goBack"></Button>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>
